@@ -12,6 +12,7 @@ return {
 				lua_ls = {},
 				pyright = {},
 				clangd = {},
+				rust_analyzer = {},
 			},
 		},
 		config = function(_, opts)
