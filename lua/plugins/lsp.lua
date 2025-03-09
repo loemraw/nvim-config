@@ -12,6 +12,7 @@ return {
 				lua_ls = {},
 				pyright = {},
 				clangd = {},
+				bashls = {},
 			},
 		},
 		config = function(_, opts)
@@ -23,13 +24,14 @@ return {
 					local o = { buffer = event.buf }
 
 					vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", o)
-					vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>", o)
-					vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", o)
-					vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", o)
-					vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", o)
-					vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", o)
+					vim.keymap.set("n", "gd", "<cmd>FzfLua lsp_definitions<cr>", o)
+					vim.keymap.set("n", "gD", "<cmd>FzfLua lsp_declarations<cr>", o)
+					vim.keymap.set("n", "gi", "<cmd>FzfLua lsp_implementations<cr>", o)
+					vim.keymap.set("n", "gr", "<cmd>FzfLua lsp_references<cr>", o)
+					vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", o)
+					vim.keymap.set("n", "gL", "<cmd>FzfLua lsp_document_diagnostics<cr>", o)
 					vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", o)
-					vim.keymap.set("n", "rn", "<cmd>lua vim.lsp.buf.rename()<cr>", o)
+					vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<cr>", o)
 					vim.keymap.set({ "n", "v" }, "fb", '<cmd>lua require("conform").format()<cr>', o)
 					vim.keymap.set("n", "ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", o)
 				end,
