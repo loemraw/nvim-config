@@ -13,6 +13,7 @@ return {
 				pyright = {},
 				clangd = {},
 				bashls = {},
+				rust_analyzer = {},
 			},
 		},
 		config = function(_, opts)
