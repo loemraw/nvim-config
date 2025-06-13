@@ -50,4 +50,15 @@ return {
 		lazy = false,
 		opts = {},
 	},
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		lazy = false,
+		opts = {
+			ensure_installed = {
+				"lua-language-server",
+				"shellcheck",
+				"pyrefly",
+			}
+		}
+	}
 }
