@@ -10,9 +10,9 @@ return {
 		opts = {
 			servers = {
 				lua_ls = {},
-				pyright = {},
 				clangd = {},
 				bashls = {},
+				pyrefly = {},
 				rust_analyzer = {},
 			},
 		},
