@@ -59,6 +59,7 @@ return {
 				"lua-language-server",
 				"shellcheck",
 				"pyrefly",
+				"stylua"
 			}
 		}
 	}
