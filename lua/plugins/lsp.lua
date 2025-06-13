@@ -33,7 +33,7 @@ return {
 					vim.keymap.set("n", "gL", "<cmd>FzfLua lsp_document_diagnostics<cr>", o)
 					vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", o)
 					vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<cr>", o)
-					vim.keymap.set({ "n", "v" }, "fb", '<cmd>lua require("conform").format()<cr>', o)
+					vim.keymap.set({ "n", "v" }, "<leader>fb", '<cmd>lua require("conform").format()<cr>', o)
 					vim.keymap.set("n", "ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", o)
 				end,
 			})
