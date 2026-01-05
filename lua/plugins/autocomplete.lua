@@ -1,20 +1,13 @@
 return {
 	"saghen/blink.cmp",
 	dependencies = "rafamadriz/friendly-snippets",
-
 	version = "*",
 	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
-
-	---@module 'blink.cmp'
-	---@type blink.cmp.Config
 	opts = {
-		-- 'default' for mappings similar to built-in completion
-		-- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
-		-- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
 		keymap = {
-			preset = "enter",
-			["<C-k>"] = { "select_prev" },
-			["<C-j>"] = { "select_next" },
+			preset = "default",
+			["<C-j>"] = { "select_next", "fallback" },
+			["<C-k>"] = { "select_prev", "fallback" },
 			["<C-d>"] = { "scroll_documentation_down" },
 			["<C-u>"] = { "scroll_documentation_up" },
 		},

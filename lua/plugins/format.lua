@@ -9,4 +9,14 @@ return {
 			rust = { "rustfmt" }
 		},
 	},
+	keys = {
+		{
+			"<leader>fb",
+			function()
+				require("conform").format()
+			end,
+			mode = { "n", "v" },
+			desc = "Format buffer",
+		},
+	},
 }

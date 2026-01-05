@@ -18,14 +18,14 @@ return {
 			files = {
 				cwd_prompt = false,
 				actions = {
-					["alt-i"] = { actions.toggle_ignore },
-					["alt-h"] = { actions.toggle_hidden },
+					["ctrl-g"] = { fn = actions.toggle_ignore },
+					["ctrl-h"] = { fn = actions.toggle_hidden },
 				},
 			},
 			grep = {
 				actions = {
-					["alt-i"] = { actions.toggle_ignore },
-					["alt-h"] = { actions.toggle_hidden },
+					["ctrl-g"] = { fn = actions.toggle_ignore },
+					["ctrl-h"] = { fn = actions.toggle_hidden },
 				},
 			},
 		}
